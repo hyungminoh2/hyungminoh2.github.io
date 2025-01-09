@@ -6,6 +6,8 @@ nav {
   position: sticky;
   background-color: beige;
   align-items: center;
+  top: 0;
+  z-index: 1000; /* Ensure navbar stays on top */
 }
 
 /* About - Contact Links */
@@ -47,23 +49,85 @@ nav a:not(.name-header):hover::after {
 }
 
 /* Intro page */
-.header-text {
-  flex: 1;
-
-  max-width: 115rem;
-  display: grid;
-  grid-template-columns: 3fr 2fr;
-  row-gap: 3rem;
-  align-content: center;
-  justify-content: center;
-
-  align-items: start;
-  justify-items: start;
+.header-content {
+  display: flex;
+  height: 100vh; /* Take up the full height of the screen */
+  flex-direction: column; /* Stack the text vertically */
+  justify-content: space-between;
+  align-items: center;
+  padding: 150px; /* Added padding to create space from top and bottom */
 }
 
-.header__img {
-  width: 75%;
-  grid-column: 2 / 3;
-  grid-row: 1 / span 4;
-  transform: translateY(-6rem);
+.header-text h1, .header-text h2 {
+  font-size: clamp(45px, 2rem, 3rem);
+  margin: 10px 0;
 }
+
+.header-text h2 {
+  font-size: 1.5rem;
+  margin-top: 5px;
+}
+
+.header-image {
+  display: flex;
+  justify-content: center; /* Centers the image horizontally */
+  align-items: center; /* Centers the image vertically (if needed) */
+  width: 100%; /* Ensure it takes full width */
+  margin-top: 20px;
+}
+
+.header-image img {
+  max-width: 500px; /* Ensure the image is not too wide */
+  border-radius: 10px; /* Optional: Make the image corners rounded */
+  transform: translateY(-30px); /* Pulls image up slightly */
+}
+
+@media (max-width: 768px) {
+  .header-text h1 {
+    font-size: 2.5rem;
+  }
+
+  .header-text h2 {
+    font-size: 1.2rem;
+  }
+
+  .header-image {
+    width: 90%;
+  }
+}
+
+/* Typing Effect */
+.type {
+  font-size: clamp(24px, 1.5rem, 2.5rem);
+  display: inline-block; /* Make sure it behaves like inline text */
+  white-space: nowrap; /* Prevents the text from wrapping to the next line */
+  overflow: hidden; /* Hide the text */
+  position: relative; /* For cursor positioning */
+  padding-right: 5px; /* Add space between text and cursor */
+}
+
+/* Blinking Cursor */
+.type::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 3px;
+  height: 100%;
+  background-color: rgb(110, 21, 21); /* The cursor */
+  animation: blink 0.75s step-end infinite;
+}
+
+/* Blinking animation */
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+

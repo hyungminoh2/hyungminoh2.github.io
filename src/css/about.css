@@ -1,0 +1,37 @@
+/* About Me Section */
+.about-info p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #121212;
+    margin-bottom: 20px;
+    text-align: center; /* Centers the text */
+    padding: 15px; /* Adds padding around each <p> element */
+    max-width: 800px; /* Optional: Limits the width for better readability */
+    margin-left: auto; /* Centers the <p> block */
+    margin-right: auto; /* Centers the <p> block */
+  }
+  
+  .personal-skills {
+    background-color: #47B2BE;
+    padding: 20px;
+    border-radius: 8px;
+    color: white;
+    margin-top: 30px;
+  }
+  
+  .personal-skills p, h3 {
+    font-size: 1.2rem;
+    margin: 10px 0;
+    text-align: center; /* Centers the text in the skills section */
+  }
+  
+  .personal-skills h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+  }
+  
+  .personal-skills strong {
+    font-weight: bold;
+    color: #249637;
+  }
+  

@@ -1,0 +1,69 @@
+/* Nav Style */
+nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem;
+  position: sticky;
+  background-color: beige;
+  align-items: center;
+}
+
+/* About - Contact Links */
+nav a {
+  margin: 0 0.5rem;
+  font-size: clamp(16px, 1.5rem, 24px);
+  color: #000000;
+  text-decoration: none;
+  position: relative;
+  font-weight: bold;
+}
+
+/* Underline Transition (Only for About - Contact Links) */
+nav a:not(.name-header)::after {
+  content: "";
+  width: 0;
+  height: 3px;
+  background: #283c9f;
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  transition: 0.5s;
+}
+
+nav a:not(.name-header):hover::after {
+  width: 100%;
+}
+
+/* Name Header (Hyungmin Oh) Specific Hover Effect */
+.name-header {
+  font-size: clamp(16px, 1.5rem, 24px);
+  color: #000000;
+  font-weight: bold;
+}
+
+.name-header:hover {
+  color: black;
+  transform: scale(1.2);
+}
+
+/* Intro page */
+.header-text {
+  flex: 1;
+
+  max-width: 115rem;
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  row-gap: 3rem;
+  align-content: center;
+  justify-content: center;
+
+  align-items: start;
+  justify-items: start;
+}
+
+.header__img {
+  width: 75%;
+  grid-column: 2 / 3;
+  grid-row: 1 / span 4;
+  transform: translateY(-6rem);
+}

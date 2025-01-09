@@ -1,0 +1,35 @@
+@import url(https://fonts.googleapis.com/css?family=Poppins);
+
+/* 
+Color Palette: 
+beige, coral (#FF906B), moonstone (#47B2BE), darkgray (#121212)
+*/
+* {
+  font-family: "Poppins", sans-serif;
+  scroll-behavior: smooth;
+  color: #000000;
+}
+
+body {
+  background-color: beige;
+  margin: 0;
+}
+
+h1 {
+  font-size: clamp(32px, 2rem, 3rem);
+  text-align: center;
+}
+
+main {
+  padding: 10%;
+}
+
+.circle {
+  background: #ff906b;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  border-radius: 50%;
+  width: 10rem;
+  height: 10rem;
+}

@@ -1,0 +1,42 @@
+/* Projects Section */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.project-card {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 15px rgba(0,0,0,0.15);
+}
+
+.project-card h3 {
+  color: #47B2BE;
+  margin-bottom: 8px;
+}
+
+.project-card span {
+  display: block;
+  font-size: 0.9rem;
+  color: #666666;
+  margin-bottom: 10px;
+}
+
+.project-card ul {
+  list-style: disc;
+  padding-left: 20px;
+  margin: 0;
+}
+
+.project-card li {
+  margin: 5px 0;
+  line-height: 1.6;
+}

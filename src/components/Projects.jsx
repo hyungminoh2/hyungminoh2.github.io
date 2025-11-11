@@ -11,6 +11,8 @@ import natours3 from "../images/natours3.png";
 import natours4 from "../images/natours4.png";
 import recipeapi from "../images/recipeapi.png";
 import medivault from "../images/medivault.jpg";
+import popcorn1 from "../images/popcorn1.png";
+import popcorn2 from "../images/popcorn2.png";
 
 function ProjectCard({ project }) {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
@@ -185,6 +187,19 @@ function Projects() {
         docs: "https://documenter.getpostman.com/view/25780937/2sB3QCSDPD",
       },
     },
+    {
+      title: "PopcornPal",
+      subtitle: "React Movie App",
+      description:
+        "A React app to track movies you watched, rate them, and see IMDb ratings. Built with React, Vite, and localStorage persistence.",
+      tags: ["React", "Vite"],
+      image: [popcorn1, popcorn2],
+      links: {
+        github: "https://github.com/hyungminoh2/PopcornPal",
+        live: "https://popcornpa1.netlify.app/",
+      },
+    },
+
     {
       title: "Medi-Vault",
       subtitle: "MHacks 2024",

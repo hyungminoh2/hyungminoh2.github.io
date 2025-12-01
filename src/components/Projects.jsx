@@ -13,6 +13,91 @@ import recipeapi from "../images/recipeapi.png";
 import medivault from "../images/medivault.jpg";
 import popcorn1 from "../images/popcorn1.png";
 import popcorn2 from "../images/popcorn2.png";
+import pizza1 from "../images/pizza1.png";
+import pizza2 from "../images/pizza2.png";
+import pizza3 from "../images/pizza3.png";
+import pizza4 from "../images/pizza4.png";
+
+const projects = [
+  {
+    title: "Solvend",
+    subtitle: "MHacks 2025 (3rd Place, Most Creative Solana MCP)",
+    description:
+      "Built a full-stack application using Next.js, Flask, and Gemini AI, powering personalized crypto insights and automated email delivery. Collaborated on Solana integration with Vybe & Jupiter Dev API for real-time market queries.",
+    tags: [
+      "Next.js",
+      "Flask",
+      "Gemini AI",
+      "Solana",
+      "Vybe API",
+      "Jupiter Dev API",
+    ],
+    image: [solvend1, solvend2, solvend3],
+    links: {
+      github: "https://github.com/hyungminoh2/Solvend-mhacks2025",
+      docs: "https://devpost.com/software/solvend#updates",
+    },
+  },
+  {
+    title: "Natours",
+    subtitle: "Tour Booking Platform",
+    description:
+      "Developed and deployed full-stack tour booking API with 40+ endpoints, geospatial queries, and advanced MongoDB aggregation pipelines. Implemented secure authentication (JWT), role-based authorization, Stripe payment integration, and Brevo email service.",
+    tags: ["Node.js", "Express", "MongoDB", "Stripe", "JWT", "Mapbox", "Brevo"],
+    image: [natours1, natours2, natours3, natours4],
+    links: {
+      live: "https://natours-2s7j.onrender.com/",
+      github: "https://github.com/hyungminoh2/natours",
+      docs: "https://documenter.getpostman.com/view/25780937/2sB3HqJyvj",
+    },
+  },
+  {
+    title: "Recipe API",
+    subtitle: "Backend Web Application",
+    description:
+      "Built RESTful API with advanced querying (filtering, sorting, pagination), MVC architecture, and MongoDB data models with validation and relationships. Implemented JWT authentication, password encryption, and role-based access control.",
+    tags: ["Node.js", "Express", "MongoDB", "JWT", "REST API"],
+    image: recipeapi,
+    links: {
+      docs: "https://documenter.getpostman.com/view/25780937/2sB3QCSDPD",
+    },
+  },
+  {
+    title: "PopcornPal",
+    subtitle: "React Movie App",
+    description:
+      "A React app to track movies you watched, rate them, and see IMDb ratings. Built with React, Vite, and localStorage persistence.",
+    tags: ["React", "Vite"],
+    image: [popcorn1, popcorn2],
+    links: {
+      github: "https://github.com/hyungminoh2/PopcornPal",
+      live: "https://popcornpa1.netlify.app/",
+    },
+  },
+  {
+    title: "Fast React Pizza",
+    subtitle: "Full React Pizza Ordering App",
+    description:
+      "A full-featured React application for browsing pizzas, managing a cart, and placing orders. Built with React Router loaders/actions, custom hooks, Context-based state management, optimistic updates, and a polished end-to-end checkout flow. Inspired by Jonas Schmedtmann’s Fast React Pizza Co project.",
+    tags: ["React", "Vite", "React Router"],
+    image: [pizza1, pizza2, pizza3, pizza4], // replace with your own images
+    links: {
+      github: "https://github.com/hyungminoh2/fast-react-pizza",
+      live: "https://fastreactpizzaaa.netlify.app/", // or your Netlify link
+    },
+  },
+  {
+    title: "Medi-Vault",
+    subtitle: "MHacks 2024",
+    description:
+      "Developed an iOS application for offline medical equipment tracking system using Swift, integrating seamless OCR functionality with Apple's built-in text recognition tools. Collaborated with Flask/MariaDB backend team for efficient data handling.",
+    tags: ["Swift", "iOS", "OCR", "Flask", "MariaDB"],
+    image: medivault,
+    links: {
+      github: "https://github.com/hawonc/Medi-Vault",
+    },
+  },
+];
 
 function ProjectCard({ project }) {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
@@ -31,7 +116,7 @@ function ProjectCard({ project }) {
 
   return (
     <div className="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 group w-full md:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1.5rem)] max-w-md">
-      <div className="relative overflow-hidden h-48 bg-gray-200">
+      <div className="relative overflow-hidden aspect-video bg-gray-200">
         <img
           src={images[currentImageIndex]}
           alt={`${project.title} - Image ${currentImageIndex + 1}`}
@@ -135,84 +220,6 @@ function ProjectCard({ project }) {
 }
 
 function Projects() {
-  const projects = [
-    {
-      title: "Solvend",
-      subtitle: "MHacks 2025 (3rd Place, Most Creative Solana MCP)",
-      description:
-        "Built a full-stack application using Next.js, Flask, and Gemini AI, powering personalized crypto insights and automated email delivery. Collaborated on Solana integration with Vybe & Jupiter Dev API for real-time market queries.",
-      tags: [
-        "Next.js",
-        "Flask",
-        "Gemini AI",
-        "Solana",
-        "Vybe API",
-        "Jupiter Dev API",
-      ],
-      image: [solvend1, solvend2, solvend3],
-      links: {
-        github: "https://github.com/hyungminoh2/Solvend-mhacks2025",
-        docs: "https://devpost.com/software/solvend#updates",
-      },
-    },
-    {
-      title: "Natours",
-      subtitle: "Tour Booking Platform",
-      description:
-        "Developed and deployed full-stack tour booking API with 40+ endpoints, geospatial queries, and advanced MongoDB aggregation pipelines. Implemented secure authentication (JWT), role-based authorization, Stripe payment integration, and Brevo email service.",
-      tags: [
-        "Node.js",
-        "Express",
-        "MongoDB",
-        "Stripe",
-        "JWT",
-        "Mapbox",
-        "Brevo",
-      ],
-      image: [natours1, natours2, natours3, natours4],
-      links: {
-        live: "https://natours-2s7j.onrender.com/",
-        github: "https://github.com/hyungminoh2/natours",
-        docs: "https://documenter.getpostman.com/view/25780937/2sB3HqJyvj",
-      },
-    },
-    {
-      title: "Recipe API",
-      subtitle: "Backend Web Application",
-      description:
-        "Built RESTful API with advanced querying (filtering, sorting, pagination), MVC architecture, and MongoDB data models with validation and relationships. Implemented JWT authentication, password encryption, and role-based access control.",
-      tags: ["Node.js", "Express", "MongoDB", "JWT", "REST API"],
-      image: recipeapi,
-      links: {
-        docs: "https://documenter.getpostman.com/view/25780937/2sB3QCSDPD",
-      },
-    },
-    {
-      title: "PopcornPal",
-      subtitle: "React Movie App",
-      description:
-        "A React app to track movies you watched, rate them, and see IMDb ratings. Built with React, Vite, and localStorage persistence.",
-      tags: ["React", "Vite"],
-      image: [popcorn1, popcorn2],
-      links: {
-        github: "https://github.com/hyungminoh2/PopcornPal",
-        live: "https://popcornpa1.netlify.app/",
-      },
-    },
-
-    {
-      title: "Medi-Vault",
-      subtitle: "MHacks 2024",
-      description:
-        "Developed an iOS application for offline medical equipment tracking system using Swift, integrating seamless OCR functionality with Apple's built-in text recognition tools. Collaborated with Flask/MariaDB backend team for efficient data handling.",
-      tags: ["Swift", "iOS", "OCR", "Flask", "MariaDB"],
-      image: medivault,
-      links: {
-        github: "https://github.com/hawonc/Medi-Vault",
-      },
-    },
-  ];
-
   return (
     <section id="projects" className="min-h-screen py-20 px-6 bg-gray-50">
       <div className="max-w-7xl mx-auto">
